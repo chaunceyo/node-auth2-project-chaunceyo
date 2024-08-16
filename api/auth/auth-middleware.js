@@ -47,7 +47,6 @@ const checkUsernameExists = (req, res, next) => {
 
 
 const validateRoleName = (req, res, next) => {
-  next()
   if(!req.body.role_name || !req.body.role_name.trim()){
     req.role_name = 'student'
   }else if(req.body.role_name.trim() === 'admin'){
